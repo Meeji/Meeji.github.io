@@ -5,10 +5,36 @@
     / Always force latest IE rendering engine or request Chrome Frame
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     / Use title if it's in the page YAML frontmatter
-    %title oec
+    %title oddeyedcat
     %link{:rel => "stylesheet", :href=>"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"}
+    %link{:rel => "stylesheet", :href=>"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"}
+    %link{:rel => "stylesheet", :href=>"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"}
+
   %body{:class => "body"}
+
+    .container
+      .navbar.navbar-default{:role => "navigation"}
+        .container-fluid
+          .navbar-header
+            %a.navbar-brand{:href => "#"} oddeyedcat
+          .collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li.active
+                %a{:href=>"http://oddeyedcat.co.uk"}
+                  %span.glyphicon.glyphicon-home Home
+              %li
+                %a{:href=>"#"} Link1
+              %li
+                %a{:href=>"#"} Link2
+            %ul.nav.navbar-nav.navbar-right
+              %li.active
+                %a{:href=>"#"} R-Link1
+              %li
+                %a{:href=>"#"} R-Link2
+
     = yield
+
+
     %script{:type => "text/javascript", :src => "/scripts/all.js"}
     %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"}
     %script{:type => "text/javascript", :src => "https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}
