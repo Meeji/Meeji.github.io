@@ -7,12 +7,10 @@
     %meta{:name=>"description", :content=>"Describes something"}
     %meta{:name=>"author", :content=>"Wrote this"}
     %title oddeyedcat
-    %link{:rel => "stylesheet", :href=>"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"}
-    %link{:rel => "stylesheet", :href=>"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"}
-    %link{:rel => "stylesheet", :href=>"https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"}
+    %link{:rel => "stylesheet", :href=>"/bootstrap/dist/css/bootstrap.css"}
+    %link{:rel => "stylesheet", :href=>"/bootstrap/dist/css/bootstrap-theme.css"}
 
-  %body.body
-
+  %body
     .container
       .navbar.navbar-default{:role => "navigation"}
         .container-fluid
@@ -22,7 +20,8 @@
             %ul.nav.navbar-nav
               %li.active
                 %a{:href=>"http://oddeyedcat.co.uk"}
-                  %span.glyphicon.glyphicon-home Home
+                  .glyphicon.glyphicon-home
+                  Home
               %li
                 %a{:href=>"#"} Link1
               %li
@@ -35,7 +34,6 @@
 
       = yield
 
-
-    %script{:type => "text/javascript", :src => "/scripts/all.js"}
-    %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"}
-    %script{:type => "text/javascript", :src => "https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"}
+    /%script{:type => "text/javascript", :src => "/scripts/all.js"}
+    %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"}
+    %script{:type => "text/javascript", :src => "/bootstrap/dist/js/bootstrap.min.js"}
