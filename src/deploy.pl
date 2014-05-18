@@ -7,7 +7,7 @@ my $JADE_PATH       = ".\\jade";
 my $LESS_PATH       = ".\\less";
 my $TYPESCRIPT_PATH = ".\\typescript";
 my $JAVASCRIPT_PATH = ".\\javascript";
-my @TARGET_IGNORE   = ("script", "css", "bootstrap", ".", "..", ".git", "oddeyedcat", "OLD", ".gitignore", "CNAME", "deploy.pl", "README.md");
+my @TARGET_IGNORE   = ("src", "fonts", "js", "css", ".", "..", ".git", ".gitignore", "CNAME", "deploy.pl", "README.md");
 
 my @target_dir      = Get_File_List(".");
 my @jade_dir        = Get_File_List($JADE_PATH);
